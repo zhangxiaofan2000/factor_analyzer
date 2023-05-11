@@ -3,6 +3,7 @@
 # Mail : 503302425@qq.com
 # Date : 2023/5/11 23:11
 # File : Get_excel.py
+import asyncio
 import os
 import pandas as pd
 import docx
@@ -40,21 +41,35 @@ def extract_table_data(filename):
             df.to_excel(output_file, index=False, encoding="utf-8-sig")
             break
 
+async def main(files):
+    loop = asyncio.get_running_loop()
+    with concurrent.futures.ThreadPoolExecutor() as pool:
+        # 创建一个线程池，用于执行IO操作
+        tasks = []
+        for file in files:
+            # 提交异步任务到线程池
+            task = loop.run_in_executor(pool, extract_table_data, file)
+            tasks.append(task)
+        # 并发执行任务
+        results = await asyncio.gather(*tasks)
+        return results
 
+# 调用异步函数
 files = os.listdir(folder_path)
+results = asyncio.run(main(files))
 
-with concurrent.futures.ThreadPoolExecutor() as executor:
-    # 提交任务到线程池中并获得Future对象
-    future_list = [executor.submit(extract_table_data, arg) for arg in files]
 
-    # 获取每个任务的结果
-    result_list = []
-    with tqdm(total=len(future_list)) as pbar:
-        for future in concurrent.futures.as_completed(future_list):
-            result = future.result()
-            result_list.append(result)
-            pbar.update(1)
-
+# with concurrent.futures.ThreadPoolExecutor() as executor:
+#     # 提交任务到线程池中并获得Future对象
+#     future_list = [executor.submit(extract_table_data, arg) for arg in files]
+#
+#     # 获取每个任务的结果
+#     result_list = []
+#     with tqdm(total=len(future_list)) as pbar:
+#         for future in concurrent.futures.as_completed(future_list):
+#             result = future.result()
+#             result_list.append(result)
+#             pbar.update(1)
 
     # 并发执行任务
     # results2 = list(tqdm(executor.map(extract_table_data,files), total=len(files)))
