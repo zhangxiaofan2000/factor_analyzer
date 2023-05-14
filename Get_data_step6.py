@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 # Auther : ZhangYiLong
 # Mail : 503302425@qq.com
-# Date : 2023/5/15 0:25
-# File : Get_data_step5.py
+# Date : 2023/5/15 0:51
+# File : Get_data_step6.py
+
 import os
 
 import pandas as pd
@@ -11,9 +12,8 @@ from tqdm import tqdm
 import concurrent.futures
 
 # 全局变量，存储所有文件合并后的数据
-df = pd.read_excel(r'G:\PythonProject\factor_analyzer\data\data.xlsx', dtype={'股票代码': str,'时间': str})
+df = pd.read_excel(r'G:\PythonProject\factor_analyzer\data\data2.xlsx', dtype={'股票代码': str,'时间': str})
 
-path = r"G:\PythonProject\factor_analyzer\data\主要会计数据"
 def merge_file(file):
     file_path = os.path.join(path, file)
     # 提取股票代码、时间和公司名称
@@ -33,7 +33,12 @@ def merge_file(file):
                 if not pd.isna(value) and value != '':
                     df.at[row_index, matched_column] = value
 
+path = r"G:\PythonProject\factor_analyzer\data\费用excel"
 files = [f for f in os.listdir(path) if f.endswith('.xlsx')]
 with concurrent.futures.ThreadPoolExecutor() as executor:
     # 并发执行任务
     results = list(tqdm(executor.map(merge_file, files), total=len(files)))
+
+
+
+df.to_excel('data3.xlsx')
