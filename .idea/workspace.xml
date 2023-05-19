@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14d67736-03ca-4eb8-8255-7def3c0409b0" name="Changes" comment="聚类结果分析">
+    <list default="true" id="14d67736-03ca-4eb8-8255-7def3c0409b0" name="Changes" comment="数据">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +212,7 @@
       <workItem from="1683820017096" duration="12695000" />
       <workItem from="1684077870871" duration="21562000" />
       <workItem from="1684108530026" duration="2968000" />
-      <workItem from="1684460060006" duration="11471000" />
+      <workItem from="1684460060006" duration="11503000" />
     </task>
     <task id="LOCAL-00001" summary="异步IO">
       <created>1683823508118</created>
@@ -297,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684483341151</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="数据">
+      <created>1684483406230</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684483406230</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,9 +318,9 @@
     <MESSAGE value="ok" />
     <MESSAGE value="okok" />
     <MESSAGE value="Kmeans_step10.py" />
-    <MESSAGE value="数据" />
     <MESSAGE value="聚类结果分析" />
-    <option name="LAST_COMMIT_MESSAGE" value="聚类结果分析" />
+    <MESSAGE value="数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/factor_analyzer$Get_data_step5.coverage" NAME="Get_data_step5 Coverage Results" MODIFIED="1684082528004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
