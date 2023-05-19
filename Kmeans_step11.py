@@ -16,7 +16,7 @@ from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-def cluster_companies(data, factors, n_clusters):
+def cluster_companies(data, factors, n_clusters,i):
     """
     对公司进行聚类
 
@@ -40,20 +40,13 @@ def cluster_companies(data, factors, n_clusters):
     data['聚类结果'] = kmeans.labels_
 
     # 可视化聚类结果
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
+    ax = fig.add_subplot(3,2,i+1, projection='3d')
     ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=kmeans.labels_)
     ax.set_xlabel(factors[0])
     ax.set_ylabel(factors[1])
     ax.set_zlabel(factors[2])
-    ax.set_title('公司聚类结果')
-
-    # 保存图表
-    plt.savefig('cluster_plot.png')
-    plt.savefig(f'./data/聚类结果/{year}Kmeans聚类结果.png')
-
-    # 返回包含公司名称、因子得分和聚类结果的DataFrame
-    return data
+    ax.set_title(f'{year}公司聚类结果')
+    plt.sca(ax)  # 设置当前子图
 
 
 def plot_elbow_curve(data, factors, max_clusters):
@@ -149,6 +142,11 @@ for i, file in enumerate(files):
     # # 对公司进行聚类
     # clustered_df = cluster_companies(data, factors, n_clusters)
     # clustered_df = clustered_df.sort_values(by='Total Score', ascending=False).reset_index(drop=True)
+
+
+    cluster_companies(data, factors, n_clusters,i)
+
+
     #
     # file= file.split('/')[-1]
     # clustered_df.to_excel(f'G:\\PythonProject\\factor_analyzer\\data\\聚类结果\\kmeans{file}',index=False)
@@ -157,11 +155,11 @@ for i, file in enumerate(files):
     # clustered_df = cluster_companies2(data, factors)
     # clustered_df = clustered_df.sort_values(by='Total Score', ascending=False).reset_index(drop=True)
     # 在指定的子图位置绘制聚类图
-    ax = axes[ i % 3,i // 3]
-    plt.sca(ax)  # 设置当前子图
-    cluster_companies2(data, factors)
-    # 设置子图标题
-    ax.set_title(f'{year}公司聚类谱系图')
+    # ax = axes[ i % 3,i // 3]
+    # plt.sca(ax)  # 设置当前子图
+    # cluster_companies2(data, factors)
+    # # 设置子图标题
+    # ax.set_title(f'{year}公司聚类谱系图')
 
 
     #
@@ -169,7 +167,7 @@ for i, file in enumerate(files):
     # clustered_df.to_excel(f'G:\\PythonProject\\factor_analyzer\\data\\聚类结果\\系统聚类{file}',index=False)
 
     # 调整子图之间的间距
-    plt.tight_layout()
+    # plt.tight_layout()
 
 # 保存图表
-plt.savefig('./data/聚类结果/系统聚类法聚类结果.png')
+plt.savefig('./data/聚类结果/kmeans.png')
