@@ -111,21 +111,13 @@ def cluster_companies2(data, factors):
     # 使用系统聚类法进行聚类
     Z = linkage(X, method='ward')
 
-    # 绘制聚类树状图（谱系图）
-    plt.figure(figsize=(10, 6))
-    dendrogram(Z)
-
-    # 创建2列3行的图表
-    fig, axes = plt.subplots(2, 3, figsize=(12, 8))
-
+    # 绘制聚类谱系图
+    dendrogram(Z, labels=data['公司名称'].values)
     plt.xlabel('公司')
     plt.ylabel('聚类距离')
     plt.title(f'{year}公司聚类谱系图')
-    plt.xticks(rotation=90)
-    # 保存图表
-    plt.savefig(f'./data/聚类结果/{year}系统聚类法聚类结果.png',bbox_inches='tight')
-    # 返回包含公司名称、因子得分和聚类结果的DataFrame
-    return data
+    plt.xticks(rotation=90, ha='right', rotation_mode='anchor')
+    plt.xticks(fontsize=3)
 
 
 
@@ -134,7 +126,7 @@ def cluster_companies2(data, factors):
 data_folder = "./data/加入因子得分与排名后的最终数据/"
 files = [os.path.join(data_folder, file) for file in os.listdir(data_folder) if file.endswith(".xlsx")]
 # 创建2列3行的图表
-fig, axes = plt.subplots(2, 3, figsize=(12, 8))
+fig, axes = plt.subplots(3, 2, figsize=(8, 12),dpi=900)
 
 for i, file in enumerate(files):
     # 读取数据
@@ -154,30 +146,30 @@ for i, file in enumerate(files):
     # # 绘制肘部图
     # plot_elbow_curve(data, factors, max_clusters)
 
-    # 对公司进行聚类
-    clustered_df = cluster_companies(data, factors, n_clusters)
-    clustered_df = clustered_df.sort_values(by='Total Score', ascending=False).reset_index(drop=True)
+    # # 对公司进行聚类
+    # clustered_df = cluster_companies(data, factors, n_clusters)
+    # clustered_df = clustered_df.sort_values(by='Total Score', ascending=False).reset_index(drop=True)
+    #
+    # file= file.split('/')[-1]
+    # clustered_df.to_excel(f'G:\\PythonProject\\factor_analyzer\\data\\聚类结果\\kmeans{file}',index=False)
 
-    file= file.split('/')[-1]
-    clustered_df.to_excel(f'G:\\PythonProject\\factor_analyzer\\data\\聚类结果\\kmeans{file}',index=False)
-
     # 对公司进行聚类
-    clustered_df = cluster_companies2(data, factors)
-    clustered_df = clustered_df.sort_values(by='Total Score', ascending=False).reset_index(drop=True)
+    # clustered_df = cluster_companies2(data, factors)
+    # clustered_df = clustered_df.sort_values(by='Total Score', ascending=False).reset_index(drop=True)
     # 在指定的子图位置绘制聚类图
-    ax = axes[i // 3, i % 3]
+    ax = axes[ i % 3,i // 3]
     plt.sca(ax)  # 设置当前子图
-    cluster_companies(data, factors)
+    cluster_companies2(data, factors)
     # 设置子图标题
     ax.set_title(f'{year}公司聚类谱系图')
 
 
+    #
+    # file= file.split('/')[-1]
+    # clustered_df.to_excel(f'G:\\PythonProject\\factor_analyzer\\data\\聚类结果\\系统聚类{file}',index=False)
 
-    file= file.split('/')[-1]
-    clustered_df.to_excel(f'G:\\PythonProject\\factor_analyzer\\data\\聚类结果\\系统聚类{file}',index=False)
-
-# 调整子图之间的间距
-plt.tight_layout()
+    # 调整子图之间的间距
+    plt.tight_layout()
 
 # 保存图表
 plt.savefig('./data/聚类结果/系统聚类法聚类结果.png')
