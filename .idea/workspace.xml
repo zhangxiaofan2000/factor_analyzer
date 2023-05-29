@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d67736-03ca-4eb8-8255-7def3c0409b0" name="Changes" comment="数据">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/get_model_step9.5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company_performance_factor_analyzer_step9.py" beforeDir="false" afterPath="$PROJECT_DIR$/company_performance_factor_analyzer_step9.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/company_data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/company_data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/区块链上市公司 经营绩效评价研究.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
       <recent name="G:\PythonProject\factor_analyzer\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.cluster_result_step12">
+  <component name="RunManager" selected="Python.get_model_step9.5">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,28 +99,6 @@
       <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Get_data_step5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="factor_analyzer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Get_data_step5.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Kmeans_step10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -247,6 +230,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="get_model_step9.5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="factor_analyzer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_model_step9.5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Python.FlaskServer">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -306,19 +311,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.get_model_step9.5" />
       <item itemvalue="Python.Kmeans_step11" />
       <item itemvalue="Python.cluster_result_step12" />
       <item itemvalue="Python.Kmeans_step10" />
       <item itemvalue="Python.company_performance_factor_analyzer_step9" />
-      <item itemvalue="Python.Get_data_step5" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.get_model_step9.5" />
         <item itemvalue="Python.cluster_result_step12" />
         <item itemvalue="Python.Kmeans_step11" />
         <item itemvalue="Python.company_performance_factor_analyzer_step9" />
         <item itemvalue="Python.Kmeans_step10" />
-        <item itemvalue="Python.company_performance_factor_analyzer_step9" />
       </list>
     </recent_temporary>
   </component>
@@ -335,6 +340,10 @@
       <workItem from="1684077870871" duration="21562000" />
       <workItem from="1684108530026" duration="2968000" />
       <workItem from="1684460060006" duration="11619000" />
+      <workItem from="1684484338727" duration="1599000" />
+      <workItem from="1684506660392" duration="1937000" />
+      <workItem from="1684561437156" duration="3813000" />
+      <workItem from="1684929423217" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="异步IO">
       <created>1683823508118</created>
@@ -441,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684483957686</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="数据">
+      <created>1684487646226</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1684487646226</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +468,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -476,6 +504,7 @@
     <SUITE FILE_PATH="coverage/factor_analyzer$Get_Data.coverage" NAME="Get_Data Coverage Results" MODIFIED="1684078596006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/factor_analyzer$company_performance_factor_analyzer_step9.coverage" NAME="company_performance_factor_analyzer_step9 Coverage Results" MODIFIED="1684110166175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/factor_analyzer$Kmeans_step11.coverage" NAME="Kmeans_step11 Coverage Results" MODIFIED="1684472883394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/factor_analyzer$get_model_step9_5.coverage" NAME="get_model_step9.5 Coverage Results" MODIFIED="1684564913242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/factor_analyzer$get_Data_step2.coverage" NAME="get_Data_step2 Coverage Results" MODIFIED="1684079401518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/factor_analyzer$cluster_result_step12.coverage" NAME="cluster_result_step12 Coverage Results" MODIFIED="1684475372546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/factor_analyzer$Get_data_step6.coverage" NAME="Get_data_step6 Coverage Results" MODIFIED="1684083278571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

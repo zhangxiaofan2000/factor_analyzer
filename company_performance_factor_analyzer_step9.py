@@ -100,7 +100,6 @@ for file in files:
     # 读取数据
     data = pd.read_excel(file)
     year = os.path.splitext(file)[0][-4:]
-
     # 进行因子分析适度性检验
     result = factor_analysis_fit(data, year)
     results.append(result)
